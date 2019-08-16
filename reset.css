@@ -1,0 +1,84 @@
+body,p,h1,h2,h3,h4,ul{
+	margin:0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style:none; 
+}
+img{
+	vertical-align: middle;
+	border: none;
+}
+a{
+	text-decoration: none;
+	color: #3c3c3c;
+}
+i{
+	font-style: normal;
+
+}
+input,button{
+	margin: 0;
+	padding: 0;
+}
+button{
+	outline: none;
+}
+
+table{
+	border-collapse: collapse;   /*边框模式，合并的模式*/
+}
+tr,td{
+	padding: 0;
+}
+body
+{
+	font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f5c',sans-serif;
+	color: #3c3c3c;
+	background-color: #f4f4f4;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.layer{
+	margin: 0 auto;
+	width:1190px;
+}
+.c4{
+	color: #f40;
+
+}
+.c5{
+	color: #f50;
+}
+
+.mt10{
+	margin-top: 10px;
+
+
+}
+.mr10{
+	margin-right: 10px;
+}
+.mr7{
+	margin-right: 7px;
+}
+.mr5{
+	margin-right: 5px;
+}
+
+/*.store{
+	color: #9c9c9c;
+}*/
+/*.store:hover{
+	color: #f40;
+}*/

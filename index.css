@@ -1,0 +1,795 @@
+/*
+	@规则
+		@charset    	设置样式表的编码
+		@import         导入其他样式文件
+		@meida          媒体查询
+		@font-face      自定义字体
+
+ */
+
+
+@import url(reset.css);
+
+
+
+
+/*头部信息*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/iconfont.woff2') format('woff2'),
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),
+      url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#headMessage li{
+	float: left;
+	line-height: 35px;
+	padding: 0 6px;
+	font-size: 0;
+}
+
+#headMessage a{
+	color: #6c6c6c;
+	font-size: 12px;
+}
+#headMessage a:hover{
+	color: #f40;
+
+}
+
+#headMessage a.login{
+	color: #f22e00;
+}
+#headMessage span{
+	font-size: 12px;
+}
+
+#headMessage span.arrow{
+	margin-left: 7px;
+}
+#headMessage li strong{
+	font-size: 12px;
+	color: #f22e00;
+}
+
+#headMessage li span.store{
+	color: #9c9c9c;
+}
+#headMessage li span.store:hover{
+	color: #f40;
+}
+#headMessage li.line{
+	font-size: 12px;
+	color: #ddd;
+	padding: 0 5px;
+}
+
+
+/*头部搜索*/
+#headSearch{
+	background-color: #fff;
+	padding: 24px 0 10px 0;
+}
+#headSearch h1{
+	display: block;
+	width:190px;
+	height: 58px;
+	background: url(../image/taobao.png) center no-repeat;
+	background-size: 190px 58px;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin-top: 8px;
+}
+
+#headSearch .code{
+	width:72px;
+	height: 86px;
+	border: 1px solid #eee;
+	position:relative;
+	margin-right: 110px;
+	text-align: center;
+	margin-top: -90px;
+
+}
+#headSearch .code img{
+	width:62px;
+	height: 62px;
+}
+#headSearch .close{
+	position:absolute;
+	width:14;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	border: 1px solid #eee;
+	left: -16px;
+	top: -1px;
+	color: #ddd;
+	cursor: pointer;
+}
+
+#headSearch .search{
+	width:620px;
+	margin: 0 auto;
+}
+#headSearch .searchTab{
+	height: 22px;
+	padding-left: 17px;
+}
+#headSearch .searchTab li{
+	float: left;
+	width:36px;
+	line-height:22px;
+/*	background: pink; */
+	margin-right: 4px;
+	text-align: center;
+	color: #f40;
+	cursor: pointer;
+}
+#headSearch .searchTab li:hover{
+	background-color: #ffeee5;
+}
+#headSearch li.active{
+	color: #fff;
+	font-weight: bold;
+	border-radius: 6px 6px 0 0;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	/*ie10以上可用*/
+	ilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+	/*ie8可用*/
+}
+#headSearch .searchContent{
+	height: 40px;
+}
+#headSearch .searchBox{
+	width:546px;
+	height: 40px;
+	box-sizing: border-box;
+	border: 2px solid #ff5000;
+	border-right: none;
+	border-radius: 20px 0 0 20px;
+	overflow: hidden;
+	position:relative;
+}
+#headSearch .searchBox input{
+	width:490px;
+	height: 36px;
+	line-height: 36px;
+	outline: none;
+	border:none;
+	text-indent: 10px;
+	position:absolute;
+	z-index: 1;
+	background-color: transparent;
+} 
+#headSearch .searchBox .placeholder{
+	position:absolute;
+	top: 6px;
+	left: 14px;
+
+}
+#headSearch .placeholder span{
+	color: #9c9c9c;
+	vertical-align: 3px;
+}
+#headSearch .imgSearch{
+	position:absolute;
+	right: 20px;
+	font-size: 28px;
+	color: #9c9c9c;
+	top:-2px;
+	cursor: pointer;
+}
+#headSearch .searchContent button{
+	width:74px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	border: none;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	/*ie10以上可用*/
+	ilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+	/*ie8可用*/
+	border-radius: 0 20px 20px 0;
+}
+#headSearch .hotKey{
+	height: 25px;
+	line-height: 25px;
+}
+#headSearch a:hover{
+	color: #f40;
+}
+
+
+/*导航*/
+#nav h2{
+	width:190px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	background-color: #f50;
+}
+#nav ul{
+	width:1000px;
+	width: calc(100% - 190px);  /*支持情况：ie9+*/
+	height: 30px;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	/*ie10以上可用*/
+	ilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+	/*ie8可用*/
+	
+
+}
+#nav ul li{
+	float: left;
+	line-height: 30px;
+	margin: 0 7px;
+	font-size: 14px;
+	color: #fff;
+	position: relative;
+	padding: 0 5px;
+}
+
+#nav ul li.size{
+	font-size:16px; 
+
+}
+#nav ul li a{
+	color: #fff;
+	font-weight: bold;
+}
+#nav ul li.line{
+	margin: 0;
+	padding: 0;
+}
+#nav ul li:hover::before{
+	content: '';
+	position:absolute;
+	width:23px;
+	height: 13px;
+	background-image: url(../image/ico_01.png);
+	background-size: 23px 13px;
+	top:-13px;
+	left: 50%;
+	margin-left: -12px;
+}
+
+/*首屏内容*/
+/*侧边导航*/
+#firstScreen .firstLeft{
+	width:890px;
+
+	
+} 
+/*侧边导航*/
+#firstScreen .sideNav{
+	width:190px;
+	height: 522px;
+	background: #ddd;
+	float: left;
+	background: #fff;
+	border:2px solid #ff5000;
+	box-sizing: border-box;
+	border-top: none;
+	padding-top: 5px;
+}
+#firstScreen .sideNav li{
+	height: 32px;
+	line-height: 32px;
+	padding-left: 25px;
+	color: #999;
+	font-size: 14px;
+}
+#firstScreen .sideNav li:hover{
+	background: #ffe4dc;
+	transition: background-color 0.5s;
+	color: #f50;
+}
+#firstScreen .sideNav li:hover a{
+	color: #f50;
+
+}
+#firstScreen .sideNav a:hover{
+	text-decoration: underline;
+}
+#firstScreen .sideNav li a{
+	font-size: 14px;
+}
+#firstScreen .sideNav li span{
+	font-size: 12px;
+
+	padding-right: 5px;
+}
+
+
+
+
+/*图片1容器*/
+#firstScreen .img1Box{
+	width:690px;
+	height: 282px;
+	background: #eee;
+	margin-top: 10px;
+}
+#firstScreen .pic{
+	position:relative;
+	width: 520px;
+
+}
+#firstScreen .pic:hover button{
+	display: block;
+
+}
+
+#firstScreen .pic button{
+	width: 20px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	border:none;
+	background-color: rgba(0,0,0,0.3);
+
+	background-color: #000\9; /* ie9一下浏览器*/
+	filter: alpha(opacity=30);
+	position:absolute;
+	top:50%;
+	margin-top: -15px;
+	display: none;
+}
+#firstScreen .pic button.leftBtn{
+	left: 0;
+	border-radius: 0 15px 15px 0;
+}
+#firstScreen .pic button.rightBtn{
+	border-radius: 15px 0 0 15px;
+	right: 0;
+}
+#firstScreen .pic .circle{
+	position: absolute;
+	bottom:15px;
+	left:50%;
+	background-color: rgba(255,255,255,0.3); /* 支持情况为ie9+*/
+	border-radius: 10px;
+	padding: 3px 0;
+	font-size: 0;
+	margin-left: -35px;
+}
+#firstScreen .pic .circle span{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 0 3px;
+	cursor: pointer;
+}
+#firstScreen .pic .circle span.active{
+	background-color: #ff5000;
+}
+#firstScreen .ad{
+	width: 160px;
+}
+#firstScreen .ad img{
+	width: 160px;
+}
+
+
+
+
+
+
+
+/*图片2容器*/
+#firstScreen .img2Box{
+	width:690px;
+	height: 220px;
+
+	float: right;
+	margin-top: 10px;
+
+}
+#firstScreen .img2Box .picTitle{
+	height: 20px;
+}
+#firstScreen .img2Box .picTitle .text{
+	height: 17px;
+	line-height: 17px;
+}
+#firstScreen .img2Box .picTitle .text .bg{
+	background: url(../image/ico_03.png) no-repeat left;
+	background-size: 122px 22px;
+	width: 136px;
+    position: absolute;
+    height: 19px;
+    padding-left: 136px;
+    color: #666;
+}
+#firstScreen .img2Box .picTitle .text i{
+	color: #ff1648;
+}
+#firstScreen .img2Box .picTitle .line{
+	height: 3px;
+	background-color: #ff1648;
+	position: relative;
+}
+#firstScreen .img2Box .picTitle .line span{
+	width: 87px;
+	height: 3px;
+	background: #000;
+	position:absolute;
+	left: 0;
+}
+
+#firstScreen .img2Box .img{
+	height: 200px;
+	width: 520px;
+	background-color: #fff;
+	position: relative;
+
+	display: table-cell;
+	vertical-align: middle;
+	/*display: flex;
+	justify-content: space-around;
+	align-items: center;ie10+*/
+}
+#firstScreen .img2Box .img img{
+	width: 250px;
+	height: 190px;
+	margin: 0 5px;
+	
+
+}
+#firstScreen .img2Box .ad .title{
+	line-height: 20px;
+	height: 20px;
+	color: #a1a1a1;
+	background: #f1f1f1;
+
+}
+
+
+
+
+/*淘宝头条*/
+#firstScreen .news{
+	width: 890px;
+	height: 100px;
+	background: #fff;
+	margin-top: 10px;
+	box-sizing: border-box;
+	padding: 13px 13px 13px 20px;
+}
+#firstScreen .news .hd{
+	margin-top: 15px;
+}
+#firstScreen .news .hd h3{
+	width: 129px;
+	height: 26px;
+	background: url(../image/toutiao.png) no-repeat;
+	background-size: 129px 26px;
+	text-indent: -9999px;
+	overflow: hidden;
+	
+}
+#firstScreen .news .hd p{
+	color: #999;
+	line-height: 24px;
+}
+#firstScreen .news .newList{
+	width: 680px;
+	position: relative;
+}
+#firstScreen .news img{
+	width: 130px;
+	height: 73px;
+	margin-right: 15px;
+	margin-left: 3px;
+}
+#firstScreen .newList h4{
+	line-height: 28px;
+	font-size: 16px;
+	font-weight: normal;
+
+}
+#firstScreen .newList h4 a{
+	color: #333;
+}
+#firstScreen .newList h4 a:hover{
+	color: #ff5000;
+}
+#firstScreen .newList p{
+	line-height: 18px;
+	font-size: 14px;
+}
+#firstScreen .newList p a{
+	color: #999;
+}
+#firstScreen .newList .more{
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #999;
+}
+#firstScreen .newList .more:hover{
+	color: #ff5000;
+}
+
+
+
+/*右边内容*/
+#firstScreen .firstRight{
+	width:290px;
+/*	height: 623px;*/
+/*	background: #9c9c9c;*/
+	margin-top: 10px;
+}
+#firstScreen .firstRight .user{
+	width: ;
+	height: 140px;
+	background-image: url(../image/background_01.png);
+	background-size: 290px 140px;
+	padding-top: 5px;
+
+}
+
+#firstScreen .firstRight .user .avatar{
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+
+	border-radius: 50%;
+	overflow: hidden;
+}
+#firstScreen .firstRight .user img{
+	width: 50px;
+	height: 50px;
+}
+#firstScreen .firstRight .user .username{
+	line-height: 16px;
+	text-align:center;
+}
+#firstScreen .firstRight .user .member{
+	text-align: center;
+	font-size: 0;
+}
+#firstScreen .firstRight .user .member a{
+	display: inline-block;
+	font-size:12px;
+	border-radius: 9px;
+	background: #ffe4dc;
+	padding: 0 10px 0 20px;
+	margin: 0 2px;
+}
+#firstScreen .firstRight .user .member a.gold{	
+	background: #ffe4dc url(../image/ico_02.png) 0 -572px no-repeat;
+	background-size: 24px 597px;
+	
+}
+#firstScreen .firstRight .user .member a.club{	
+	background: #ffe4dc url(../image/ico_02.png) 0 -528px no-repeat;
+	background-size: 24px 597px;
+	
+}
+#firstScreen .firstRight .user .btn{
+	text-align: center;
+/*	width: 75px;
+	height: 25px;
+	line-height: 25px;
+	margin: 12px 2px 0 2px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 4px;*/
+}
+#firstScreen .firstRight .user .btn button{
+	width: 75px;
+	height: 25px;
+	line-height: 25px;
+	margin: 12px 2px 0 2px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 4px;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	/*ie10以上可用*/
+	ilter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+	/*ie8可用*/
+	border:none;
+	cursor: pointer;
+}
+#firstScreen .firstRight .user .btn button.login{
+	width: 92px;
+}
+#firstScreen .firstRight a.tipOff{
+	display:block;
+	width:290px ;
+	height:26px ;
+	line-height: 26px;
+	background:#ffe4dd ;
+	font-size: 12px;
+	color: #f40;
+	text-align: center;
+}
+/*#firstScreen .firstRight a span{
+	display: block;
+	font-size: 12px;
+	color: #f40;
+	height:26px ;
+	line-height: 26px;
+}*/
+#firstScreen .firstRight .tipOff i{
+	font-size: 12px;
+	color: #f40;
+	position: relative;
+	left: 30px;
+}
+#firstScreen .firstRight .notice{
+	height: 108px;
+	background-color: #fff;
+}
+#firstScreen .firstRight .title{
+	text-align: center;
+	font-size: 0;
+	padding-top: 10px;
+}
+#firstScreen .firstRight .title li{
+	display: inline-block;	
+	font-size: 12px;
+	line-height: 20px;
+	margin:0 10px ;
+	padding: 0 4px;
+}
+#firstScreen .firstRight .notice .title a.active{
+	font-weight: bold;
+	border-bottom:2px solid #f40;
+
+}
+#firstScreen .firstRight ul a:hover{
+/*	color: #ff5000;*/
+	/*font-weight: bold;
+	border-bottom:2px solid #f40;*/
+}
+#firstScreen .firstRight .title a:hover{
+	color: #ff5000;
+	font-weight: bold;
+	border-bottom:2px solid #f40;
+	transition: 0.5s;
+}
+#firstScreen .firstRight .notice .content{
+	margin: 0 12px;
+	padding-top: 10px;
+}
+#firstScreen .firstRight .notice .content li{
+	overflow: hidden; 
+	height: 25px;
+	line-height: 25px;
+	float: left;
+	width: 130px;
+}
+#firstScreen .firstRight .notice .content li.item1{
+	width: 100%;
+	color: #ff5000;
+}
+#firstScreen .firstRight .notice .content li.item1 a{
+
+	color: #ff5000;
+}
+#firstScreen .firstRight .content a:hover{
+	color: #ff5000;
+	
+}
+
+/*图标区域*/
+#firstScreen .firstRight .icon{
+	width: 100%;
+	height: 234px;
+	background-color: #fff;
+	table-layout: fixed;    /*定义列宽的算法，fixed的计算方式是根据表格宽度自动计算列宽，每列的宽度为均分整个表格的宽度*/
+
+}
+#firstScreen .firstRight .icon td{
+	border:1px solid #f4f4f4;
+	text-align: center;
+
+}
+#firstScreen .firstRight .icon td span{
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	background: url(../image/ico_02.png) no-repeat;
+	background-size: 24px 597px;
+}
+#firstScreen .firstRight .icon td{
+	color: #333;
+	line-height: 34px;
+}
+#firstScreen .firstRight .icon .item1 span{
+	background-position: 0 0;
+}
+#firstScreen .firstRight .icon .item2 span{
+	background-position: 0 -44px;
+}
+#firstScreen .firstRight .icon .item3 span{
+	background-position: 0 -88px;
+}
+#firstScreen .firstRight .icon .item4 span{
+	background-position: 0 -132px;
+}
+#firstScreen .firstRight .icon .item5 span{
+	background-position: 0 -176px;
+}
+#firstScreen .firstRight .icon .item6 span{
+	background-position: 0 -220px;
+}
+#firstScreen .firstRight .icon .item7 span{
+	background-position: 0 -264px;
+}
+#firstScreen .firstRight .icon .item98 span{
+	background-position: 0 -308px;
+}
+#firstScreen .firstRight .icon .item9 span{
+	background-position: 0 -352px;
+}
+#firstScreen .firstRight .icon .item10 span{
+	background-position: 0 -396px;
+}
+#firstScreen .firstRight .icon .item11 span{
+	background-position: 0 -440px;
+}
+#firstScreen .firstRight .icon .item12 span{
+	background-position: 0 -484px;
+}
+
+
+/*app*/
+#firstScreen .app{
+	height: 111px;
+	background: #fff;
+}
+#firstScreen .app .title1{
+	height: 30px;
+	line-height: 30px;
+}
+#firstScreen .app .title1 a{
+	font-size: 12px;
+	margin-right: 10px;
+}
+#firstScreen .app .title1 a:hover{
+	color: #f40;
+}
+#firstScreen .app h3{
+	font-size: 14px;
+	padding-left: 13px;
+}
+#firstScreen .app ul li{
+	float: left;
+}
+#firstScreen .app .appIcon{
+	text-align: center;
+	font-size: 0;
+}
+#firstScreen .app .appIcon li{
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	/*margin: 0 10px 8px 10;*/
+	margin-left: 21px;
+	margin-bottom: 8px;
+}
+#firstScreen .app .appIcon img{
+	width: 32px;
+	height: 32px;
+}
